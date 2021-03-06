@@ -24,13 +24,15 @@ import cn.nukkit.scheduler.Task;
 public class TelekinesiCommand extends Command implements Listener
 {
 	// LOL :-)
-	public static HashMap<Player, Entity> datas = new HashMap<Player, Entity>();
+	public static HashMap<Player, Player> datas = new HashMap<Player, Player>();
 	public static final Item item = new ItemStick(16);
 	
 	
 	
 	public TelekinesiCommand(String name, String description) {
 		super(name, description);
+		
+		setPermission("telekinesis.command");
 		
 		item.setCustomName("§eT§de§4l§5e§8k§9i§0n§1e§cs§bi §6S§8o§5p§9a§2s§3ý");
 		Server.getInstance().getPluginManager().registerEvents(new Events(), Server.getInstance().getPluginManager().getPlugin("Telekinesi"));
@@ -48,10 +50,12 @@ public class TelekinesiCommand extends Command implements Listener
 
 	@Override
 	public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-		if (commandLabel.equalsIgnoreCase(super.getName()) && sender.isPlayer())
+		if (commandLabel.equalsIgnoreCase(super.getName()) && sender.isPlayer() && sender.hasPermission("telekinesis.command"))
 		{
 			TForm.OpenUI((Player)sender);
 		}
+		else if(!sender.hasPermission(getPermission()))
+			sender.sendMessage("§4You don't have permission for this");
 		return false;
 	}
 

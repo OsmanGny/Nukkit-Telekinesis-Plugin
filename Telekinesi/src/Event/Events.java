@@ -15,10 +15,10 @@ public class Events implements Listener
 	@EventHandler
 	public void Hit(EntityDamageByEntityEvent args)
 	{
-		if(args.getDamager() instanceof Player && ((Player)args.getDamager()).getInventory().getItemInHand().equals(TelekinesiCommand.item))
+		if(args.getDamager() instanceof Player && args.getEntity() instanceof Player && ((Player)args.getDamager()).getInventory().getItemInHand().equals(TelekinesiCommand.item))
 		{
 			args.setCancelled();
-			TelekinesiCommand.datas.put((Player)args.getDamager(), args.getEntity());
+			TelekinesiCommand.datas.put((Player)args.getDamager(), (Player)args.getEntity());
 		
 		}
 	}
