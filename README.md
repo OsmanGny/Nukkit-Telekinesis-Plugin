@@ -16,7 +16,7 @@ Commands:
 
 /telekinesis
 
-Opens the form window you can take the telestick or change the settings.
+Opens the form window that you can take a telestick or change the settings.
 You need to be op for executing this command
 
 I'll add new features but I'm still learning.
