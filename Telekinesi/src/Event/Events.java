@@ -15,10 +15,10 @@ public class Events implements Listener
 	@EventHandler
 	public void Hit(EntityDamageByEntityEvent args)
 	{
-		if(args.getDamager() instanceof Player && args.getEntity() instanceof Player && ((Player)args.getDamager()).getInventory().getItemInHand().equals(TelekinesiCommand.item))
+		if(args.getDamager() instanceof Player && ((Player)args.getDamager()).getInventory().getItemInHand().equals(TelekinesiCommand.item))
 		{
 			args.setCancelled();
-			TelekinesiCommand.datas.put((Player)args.getDamager(), (Player)args.getEntity());
+			TelekinesiCommand.datas.put((Player)args.getDamager(), args.getEntity());
 		
 		}
 	}
@@ -27,7 +27,11 @@ public class Events implements Listener
 	public void Býrak(PlayerInteractEvent e)
 	{
 		if(TelekinesiCommand.datas.containsKey(e.getPlayer()) && e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK))
+		{
+			// FÝUVV
+			TelekinesiCommand.datas.get(e.getPlayer()).setMotion(e.getPlayer().getDirectionVector().multiply(TelekinesiCommand.ejectforce));
 			TelekinesiCommand.datas.remove(e.getPlayer());
+		}
 	}
 }
 

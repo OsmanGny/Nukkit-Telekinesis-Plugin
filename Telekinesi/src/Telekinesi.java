@@ -14,7 +14,6 @@ public class Telekinesi extends PluginBase
 		getServer().getCommandMap().register("Kullaným /telekinesi", new TelekinesiCommand("telekinesi", 
 				"Wow evet telekinetik güçlere sahip olacaksýnýz ve zihninizle yaratýklarý hareket ettirebileceksiniz"));
 		getServer().getPluginManager().registerEvents(new TelekinesiCommand("", ""), this);
-		
 	}
 	
 	@Override
