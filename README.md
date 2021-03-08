@@ -7,7 +7,7 @@ Komutlar:
 
 /telekinesis
 
-Bir pencere açar bu penceredeb telekinesi sopası alabilir yada ayarları değiştirebilirsiniz.
+Bir pencere açar bu pencerede telekinesi sopası alabilir yada ayarları değiştirebilirsiniz.
 
 Yeni özellikler ekleyeceğim fakat hala Nukkit'i öğrenme aşamasındayım.
 
