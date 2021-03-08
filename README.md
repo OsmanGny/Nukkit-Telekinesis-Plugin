@@ -8,6 +8,7 @@ Komutlar:
 /telekinesis
 
 Bir pencere açar bu pencerede telekinesi sopası alabilir yada ayarları değiştirebilirsiniz.
+Bu komutu yürütmek için OP olmalısınız.
 
 Yeni özellikler ekleyeceğim fakat hala Nukkit'i öğrenme aşamasındayım.
 
