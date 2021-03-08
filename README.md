@@ -1,5 +1,6 @@
 # Nukkit-Telekinesis-Plugin
 This plugin allow you to move entities with your mind :D
+Bu plugin ile yaratıkları zihninizle hareket ettirebilirsiniz :D
 
 TR:
 Komutlar:
