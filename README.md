@@ -2,7 +2,7 @@
 This plugin allow you to move entities with your mind :D
 
 TR:
-Commands:
+Komutlar:
 
 /telekinesis
 
